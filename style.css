@@ -132,8 +132,8 @@ header .fa-envelope:hover {
   font-weight: bold;
   position: relative;
   background-repeat: no-repeat;
-  background-image: center;
-  background-size: auto 100%;
+  background-position: center;
+  background-size: cover;
   cursor: pointer;
 }
 
@@ -206,7 +206,6 @@ header .fa-envelope:hover {
   justify-content: center;
   align-items: center;
   background-image: url("./img/tnw-conf.jpeg");
-  background-size: 100% auto;
   cursor: default;
 }
 
@@ -425,4 +424,132 @@ footer a {
 
 .copyright a:hover {
   color: #c09;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav.main {
+    display: none;
+  }
+
+  header.main i {
+    display: none;
+  }
+
+  header::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('./img/menu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  header {
+    padding: 0 16px;
+    justify-content: flex-start;
+    background-color: #fff;
+    box-shadow: 0 12px 48px #00000026;   
+  }
+
+  header .tnw-logo {
+    filter: brightness(0) saturate(100%) invert(71%) sepia(9%) saturate(199%) hue-rotate(186deg) brightness(95%) contrast(88%);
+    margin-left: 16px;
+  }
+
+  header .tnw-logo:hover {
+    filter: brightness(0) saturate(100%);
+  }
+
+  .announcement {
+    display: none;
+  }
+
+  .showcase .title {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .showcase .tnw-logo {
+    height: 105px;
+    width: auto;
+  }
+
+  .showcase .title h1 {
+    font-size: 18px;
+  }
+
+  .main-articles {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
+
+  .article.one {
+    grid-area: 1 / 1 / span 2 / span 2;
+  }
+  
+  .article.two {
+    grid-area: 3 / 1 / span 1 / span 1;
+  }
+  
+  .article.three {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+  
+  .article.four {
+    grid-area: 4 / 2 / span 1 / span 1;
+  }
+  
+  .article.five {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  .article.one h2 {
+    font-size: 20px;
+  }
+
+  .article.two h2,
+  .article.three h2,
+  .article.four h2 {
+    font-size: 19px;
+  }
+
+  .article.five {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .article.five button {
+    height: 27px;
+    margin-top: 13px;
+  }
+
+  .article.five h2 {
+    font-size: 19px;
+  }
+
+  .popular-articles ol {
+    display: block;
+  }
+
+  .popular-articles li {
+    align-items: center;
+  }
+  
+  article.stories {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
+  
+  article.stories img {
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .footer-nav .right {
+    width: 100%;
+    align-self: stretch;
+  }
 }
