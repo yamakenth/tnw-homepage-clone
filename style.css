@@ -12,7 +12,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Shentox", sans-serif;
+  font-family: "Graphik", sans-serif;
 }
 
 a {
@@ -26,6 +26,10 @@ header {
   align-items: center;
   padding: 0 32px;
   background-color: #f7f8f8;
+  font-family: "Shentox", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .tnw-logo {
@@ -72,15 +76,17 @@ header .fa-envelope:hover {
   padding: 10px 24px;
   background-color: #fd3;
   box-shadow: 0 12px 48px #00000026;
+  position: sticky;
+  top: 48px;
+  z-index: 1000;
 }
 
 .announcement a {
-  font-family: "Graphik", sans-serif;
   font-size: 13px;
 }
 
 .showcase {
-  padding: 32px 32px 0 32px;
+  padding: 32px;
 }
 
 .showcase .title {
@@ -99,5 +105,111 @@ header .fa-envelope:hover {
   font-size: 30px;
   font-weight: normal;
   color: #505666;
-  font-family: "Graphik", sans-serif;
+}
+
+.main-articles {
+  display: grid;
+  height: 632px;
+  width: 100%;
+  grid-template: repeat(5, 1fr) / repeat(8, 1fr);
+  gap: 10px;
+  color: #fff;
+}
+
+.main-articles a {
+  color: #fff;
+}
+
+.article {
+  font-weight: bold;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: center;
+  background-size: auto 100%;
+  cursor: pointer;
+}
+
+.article .container {
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+
+.article .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, #000 0%, transparent 100%);
+  z-index: 10;
+}
+
+.article p {
+  font-family: "Shentox", sans-serif;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.article.one h2,
+.article.four h2 {
+  font-size: 36px;
+}
+
+.article.two h2,
+.article.three h2 {
+  font-size: 19px;
+}
+
+.article.five h2 {
+  font-size: 22px;
+}
+
+.article.one {
+  grid-area: 1 / 1 / span 3 / span 4;
+  background-image: url("./img/article-one.jpeg");
+}
+
+.article.two {
+  grid-area: 1 / 5 / span 2 / span 2;
+  background-image: url("./img/article-two.jpeg");
+}
+
+.article.three {
+  grid-area: 1 / 7 / span 2 / span 2;
+  background-image: url("./img/article-three.jpeg");
+}
+
+.article.four {
+  grid-area: 3 / 5 / span 3 / span 4;
+  background-image: url("./img/article-four.jpeg");
+}
+
+.article.five {
+  grid-area: 4 / 1 / span 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/tnw-conf.jpeg");
+  background-size: 100% auto;
+  cursor: default;
+}
+
+.article.five h2,
+.article.five button {
+  z-index: 100;
+}
+
+.article.five button {
+  height: 48px;
+  margin-top: 20px;
+  padding: 0 28px;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  background: none;
+  cursor: pointer;
 }
