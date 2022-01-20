@@ -67,6 +67,10 @@ nav.main li:hover {
   background-color: #fff;
 }
 
+nav.main .active {
+  background-color: #fff;
+}
+
 header .fa-envelope {
   color: #cccfd3;
 }
