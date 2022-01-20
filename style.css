@@ -37,13 +37,16 @@ header {
   filter: brightness(0) saturate(100%) invert(0%) sepia(43%) saturate(7466%) hue-rotate(59deg) brightness(90%) contrast(107%);
 }
 
+.tnw-logo:hover {
+  cursor: pointer;
+}
+
 header .tnw-logo {
   height: 16px;
   margin: 16px 0;
 }
 
 header .tnw-logo:hover {
-  cursor: pointer;
   filter: brightness(0) saturate(100%) invert(20%) sepia(98%) saturate(4186%) hue-rotate(302deg) brightness(80%) contrast(115%);
 }
 
@@ -263,6 +266,10 @@ button {
   padding: 0 16px;
 }
 
+.popular-articles a:hover {
+  text-decoration: underline #cc009954 2px;
+}
+
 .latest-stories {
   padding: 112px 32px;
   display: flex;
@@ -303,11 +310,25 @@ article.stories h4 {
   font-size: 16px;
 }
 
+article.stories h4:hover {
+  text-decoration: underline #cc009954 2px;
+}
+
 .story {
   padding: 16px;
+  cursor: pointer;
+}
+
+.story:hover h6 {
+  color: #0b0b0b;
 }
 
 button.all-news {
   border: none;
   background-color: #c09;
+  font-size: 14px;
+}
+
+button.all-news:hover {
+  color: #000;
 }
