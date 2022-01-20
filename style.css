@@ -78,3 +78,26 @@ header .fa-envelope:hover {
   font-family: "Graphik", sans-serif;
   font-size: 13px;
 }
+
+.showcase {
+  padding: 32px 32px 0 32px;
+}
+
+.showcase .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+  margin-bottom: 32px;
+}
+
+.showcase .tnw-logo {
+  height: 46px;
+}
+
+.showcase .title h1 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #505666;
+  font-family: "Graphik", sans-serif;
+}
