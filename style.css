@@ -133,6 +133,11 @@ header .fa-envelope:hover {
   cursor: pointer;
 }
 
+.article:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 10px #50505085;
+}
+
 .article .container {
   padding: 24px;
   position: absolute;
