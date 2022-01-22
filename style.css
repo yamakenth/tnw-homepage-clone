@@ -199,8 +199,13 @@ header .fa-envelope:hover {
   background-image: url("./img/article-four.jpeg");
 }
 
-.article.five {
+.join-us {
   grid-area: 4 / 1 / span 2 / span 4;
+}
+
+.article.five {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,8 +503,8 @@ footer a {
   .article.four {
     grid-area: 4 / 2 / span 1 / span 1;
   }
-  
-  .article.five {
+
+  .join-us {
     grid-area: 3 / 2 / span 1 / span 1;
   }
 
@@ -555,19 +560,34 @@ footer a {
 }
 
 @media only screen and (max-width: 766px) {
-  .main-articles {
-    grid-template: repeat(3, 1fr) / 1fr;
+  .showcase .tnw-logo {
+    width: 45vw;
+    height: auto;
   }
 
-  .article.one,
-  .article.two,
-  .article.three,
-  .article.four {
-    grid-area: 1 / 1 / span 2 / span 1;
+  .main-articles {
+    grid-template: repeat(5, 1fr) / 1fr;
+    height: 800px;
+  }
+
+  .article.one {
+    grid-area: 1 / 1 / span 1 / span 1;
   }
   
-  .article.five {
+  .article.two {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  
+  .article.three {
     grid-area: 3 / 1 / span 1 / span 1;
+  }
+  
+  .article.four {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+
+  .join-us {
+    grid-area: 5 / 1 / span 1 / span 1;
   }
 
   .latest-stories {
@@ -586,6 +606,13 @@ footer a {
 
   article.stories .story {
     display: flex;
+    gap: 20px;
+  }
+
+  article.stories .story img {
+    height: 23vw;
+    width: 23vw;
+    object-fit: cover;
   }
 
   .all-news {
